@@ -1,14 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}'
+  ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: '375px'
+      }
+    },
     colors: {
       white: 'white',
       black: 'black',
       text: 'hsl(0, 0%, 63%)',
       hover: 'hsl(0, 0%, 27%)',
-      overlay: 'hslahsl(0, 0%, 0%, .5)'
+      overlay: 'hslahsl(0, 0%, 0%, .5)',
+      transparent: 'transparent'
     },
     fontSize: {
       paragraph: [
