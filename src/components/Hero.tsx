@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SliderButtons } from './SliderButtons';
 
 const content = [
   {
@@ -46,9 +47,9 @@ export const Hero = () => {
           alt=''
         />
       </picture>
-      <div className='md:basis-[41.5%]'>
-        <div className='mx-auto my-16 flex max-w-[87%] flex-col md:ml-[11.75%] md:mr-12 md:max-w-[28.5rem] lg:my-[7.5rem] lg:ml-[16.75%]'>
-          <h1 className=' mb-4 text-title-m  text-black md:mb-6 md:text-title-d'>
+      <div className='relative md:basis-[41.5%]'>
+        <div className='mx-auto mt-16 flex max-w-[87%] flex-col pb-20 md:ml-[11.75%] md:mr-12 md:mt-8 md:max-w-[28.5rem] lg:ml-[16.75%] xl:mt-[7.5rem]'>
+          <h1 className='mb-4 text-title-m  text-black md:mb-6 md:text-title-d'>
             {content[contentIdx].title}
           </h1>
           <p className='mb-10 text-paragraph text-text md:mb-6'>
@@ -65,6 +66,16 @@ export const Hero = () => {
             />
           </a>
         </div>
+        <SliderButtons
+          prev={() =>
+            setContentIdx(
+              contentIdx - 1 < 0 ? content.length - 1 : contentIdx - 1
+            )
+          }
+          next={() =>
+            setContentIdx(contentIdx + 1 >= content.length ? 0 : contentIdx + 1)
+          }
+        />
       </div>
     </main>
   );
