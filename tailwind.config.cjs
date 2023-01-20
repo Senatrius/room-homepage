@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       screens: {
         xs: '375px'
+      },
+      fontFamily: {
+        spartan: ['League Spartan', 'sans-serif']
       }
     },
     colors: {
@@ -23,8 +26,8 @@ module.exports = {
       paragraph: [
         '1rem',
         {
-          fontWeight: 400,
-          letterSpacing: '0.0115em',
+          fontWeight: 500,
+          letterSpacing: '-0.0215em',
           lineHeight: '135%'
         }
       ],
@@ -32,7 +35,7 @@ module.exports = {
         '2.5rem',
         {
           fontWeight: 700,
-          letterSpacing: '-0.0425em',
+          letterSpacing: '-0.0525em',
           lineHeight: '92.5%'
         }
       ],
@@ -61,7 +64,7 @@ module.exports = {
       button: [
         '1rem',
         {
-          fontWeight: 400,
+          fontWeight: 500,
           letterSpacing: '0.75em'
         }
       ],
