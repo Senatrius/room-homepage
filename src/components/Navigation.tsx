@@ -4,8 +4,8 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <header>
-      <nav className='relative mx-auto flex items-center justify-center py-12 md:justify-start md:p-16'>
+    <header className='absolute w-full'>
+      <nav className='relative mx-auto flex w-full items-center justify-center py-12 md:justify-start md:p-14 lg:p-16'>
         <button
           id='menu'
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -30,7 +30,7 @@ export const Navigation = () => {
           {['home', 'shop', 'about', 'contact'].map((link, idx) => (
             <li>
               <a
-                className='relative text-black after:absolute after:-bottom-1 after:left-1/2 after:hidden after:h-0.5 after:w-1/2 after:-translate-x-1/2 after:bg-black after:content-[""] hover:after:inline md:text-white md:after:bg-white'
+                className='relative text-nav text-black after:absolute after:-bottom-1 after:left-1/2 after:hidden after:h-0.5 after:w-1/2 after:-translate-x-1/2 after:bg-black after:content-[""] hover:after:inline md:text-white md:after:bg-white'
                 key={idx}
                 href='#'>
                 {link}

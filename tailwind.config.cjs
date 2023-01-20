@@ -21,26 +21,27 @@ module.exports = {
     },
     fontSize: {
       paragraph: [
-        '0.875rem',
+        '1rem',
         {
           fontWeight: 400,
-          letterSpacing: '0.012em',
-          lineHeight: '1.225rem'
+          letterSpacing: '0.0115em',
+          lineHeight: '135%'
         }
       ],
       'title-m': [
         '2.5rem',
         {
-          fontWeight: 600,
+          fontWeight: 700,
           letterSpacing: '-0.0425em',
-          lineHeight: '2.3125rem'
+          lineHeight: '92.5%'
         }
       ],
       'title-d': [
-        '3rem',
+        'clamp(2.5rem, 3vw, 3rem)',
         {
-          fontWeight: 600,
-          letterSpacing: '-0.0425em'
+          fontWeight: 700,
+          letterSpacing: '-0.0425em',
+          lineHeight: '93.5%'
         }
       ],
       'subtitle-m': [
@@ -68,7 +69,7 @@ module.exports = {
         '1rem',
         {
           fontWeight: 600,
-          letterSpacing: '-0.415em'
+          letterSpacing: '-0.0415em'
         }
       ]
     }
