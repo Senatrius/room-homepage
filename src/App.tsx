@@ -4,11 +4,11 @@ import { Navigation } from './components/Navigation';
 
 function App() {
   return (
-    <>
+    <div className='font-spartan'>
       <Navigation />
       <Hero />
       <About />
-    </>
+    </div>
   );
 }
 

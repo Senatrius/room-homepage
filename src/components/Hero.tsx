@@ -39,8 +39,6 @@ export const Hero = () => {
       <picture className='max-h-[22.5rem] overflow-hidden md:h-auto md:max-h-full md:basis-[58.5%]'>
         <source
           srcSet={content[contentIdx].images.desktop}
-          width='840'
-          height='534'
           media='(min-width: 767px)'
         />
         <img
@@ -52,7 +50,7 @@ export const Hero = () => {
         />
       </picture>
       <div className='relative md:basis-[41.5%]'>
-        <div className='mx-auto mt-16 flex max-w-[87%] flex-col pb-24 md:ml-[11.75%] md:mr-12 md:mt-24 md:max-w-[28.5rem] lg:mt-[7.5rem] lg:ml-[16.75%]'>
+        <div className='mx-auto mt-16 flex max-w-[87%] flex-col pb-24 md:ml-[11.75%] md:mr-12 md:mt-24 md:max-w-[26.5rem] lg:mt-[7.5rem] lg:ml-[16.75%]'>
           <h1 className='mb-4 text-title-m  text-black md:mb-6 md:text-title-d'>
             {content[contentIdx].title}
           </h1>
