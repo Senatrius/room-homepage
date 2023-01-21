@@ -51,7 +51,7 @@ module.exports = {
         '0.875rem',
         {
           fontWeight: 700,
-          letterSpacing: '-0.415em'
+          letterSpacing: '0.415em'
         }
       ],
       'subtitle-d': [

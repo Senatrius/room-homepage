@@ -35,20 +35,24 @@ export const Hero = () => {
   const [contentIdx, setContentIdx] = useState<number>(0);
 
   return (
-    <main className='flex flex-col md:flex-row'>
-      <picture className='max-h-[22.5rem] overflow-hidden md:max-h-[33.375rem] md:basis-[58.5%]'>
+    <main className='flex flex-col md:min-h-[66.5vh] md:flex-row'>
+      <picture className='max-h-[22.5rem] overflow-hidden md:h-auto md:max-h-full md:basis-[58.5%]'>
         <source
           srcSet={content[contentIdx].images.desktop}
+          width='840'
+          height='534'
           media='(min-width: 767px)'
         />
         <img
-          className='h-full w-full object-cover'
+          className='min-h-full min-w-full object-cover'
+          width='375'
+          height='360'
           src={content[contentIdx].images.mobile}
           alt=''
         />
       </picture>
       <div className='relative md:basis-[41.5%]'>
-        <div className='mx-auto mt-16 flex max-w-[87%] flex-col pb-20 md:ml-[11.75%] md:mr-12 md:mt-8 md:max-w-[28.5rem] lg:ml-[16.75%] xl:mt-[7.5rem]'>
+        <div className='mx-auto mt-16 flex max-w-[87%] flex-col pb-24 md:ml-[11.75%] md:mr-12 md:mt-8 md:max-w-[28.5rem] lg:ml-[16.75%] xl:mt-[7.5rem]'>
           <h1 className='mb-4 text-title-m  text-black md:mb-6 md:text-title-d'>
             {content[contentIdx].title}
           </h1>
@@ -56,10 +60,12 @@ export const Hero = () => {
             {content[contentIdx].paragraph}
           </p>
           <a
-            className='flex items-center whitespace-nowrap text-button'
+            className='flex items-center whitespace-nowrap text-button focus-within:text-hover hover:text-hover'
             href='#'>
             SHOP NOW
             <img
+              width='40'
+              height='12'
               className='ml-6'
               src='./icon-arrow.svg'
               alt=''

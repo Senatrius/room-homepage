@@ -18,6 +18,8 @@ export const Navigation = () => {
           />
         </button>
         <img
+          width='62'
+          height='14'
           src='./logo.svg'
           alt='Room logo'
         />
@@ -28,10 +30,9 @@ export const Navigation = () => {
             isMenuOpen ? 'flex' : 'hidden'
           } absolute inset-0 items-center justify-end gap-6 bg-white px-[6.75%] xs:gap-8 md:relative md:ml-14 md:flex md:justify-start md:bg-transparent md:px-0`}>
           {['home', 'shop', 'about', 'contact'].map((link, idx) => (
-            <li>
+            <li key={idx}>
               <a
                 className='relative text-nav text-black after:absolute after:-bottom-1 after:left-1/2 after:hidden after:h-0.5 after:w-1/2 after:-translate-x-1/2 after:bg-black after:content-[""] hover:after:inline md:text-white md:after:bg-white'
-                key={idx}
                 href='#'>
                 {link}
               </a>
